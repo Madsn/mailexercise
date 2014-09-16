@@ -14,3 +14,20 @@ var toggleMenu = function(id) {
         }
     });
 };
+
+$(function(){
+    $("table").resizableColumns({
+        store: window.store
+    });
+});
+
+$(function(){
+   $(".emailrow").toArray().forEach(function(row) {
+      $(row).click(function(){
+          console.log("open email preview");
+      });
+      $(row).dblclick(function(){
+         console.log("open email in new window");
+      });
+   });
+});

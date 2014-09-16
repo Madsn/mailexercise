@@ -22,87 +22,100 @@
 </head>
 <body>
 
-<div class="col-xs-2">
-    <ul class="nav nav-list">
-        <li class="nav-header">
-            <a onclick="toggleMenu('account1')">
-                Account 1
-            </a>
-            <ul class="nav nav-list accounts" id="account1">
-                <li><a href="/" title="Inbox">Inbox</a>
-                </li>
-                <li><a href="/" title="Archive">Archive</a>
-                </li>
-                <li><a href="/" title="Important">Important</a>
-                </li>
-                <li><a href="/" title="Personal">Personal</a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-header">
-            <a onclick="toggleMenu('account2')">
-                Account 2
-            </a>
-            <ul class="nav nav-list collapse accounts" id="account2">
-                <li><a href="/" title="Inbox">Inbox</a>
-                </li>
-                <li><a href="/" title="Archive">Archive</a>
-                </li>
-                <li><a href="/" title="Important">Important</a>
-                </li>
-                <li><a href="/" title="Personal">Personal</a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-header">
-            <a onclick="toggleMenu('account3')">
-                Account 3
-            </a>
-            <ul class="nav nav-list collapse accounts" id="account3">
-                <li><a href="/" title="Inbox">Inbox</a>
-                </li>
-                <li><a href="/" title="Archive">Archive</a>
-                </li>
-                <li><a href="/" title="Important">Important</a>
-                </li>
-                <li><a href="/" title="Personal">Personal</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
-<div class="container col-xs-10">
-    <div class="row">
-        <table class="table table-hover table-striped" data-resizable-columns-id="mails-table">
-            <thead>
-                <tr>
-                    <th width="5%" data-resizable-column-id="select_column" data-noresize></th>
-                    <th width="30%" data-resizable-column-id="sender_column">Sender</th>
-                    <th width="50%" data-resizable-column-id="subject_column">Subject</th>
-                    <th width="15%" data-resizable-column-id="date_column">Date</th>
+<div class="container">
+    <div class="col-xs-2">
+        <ul class="nav nav-list">
+            <li class="nav-header">
+                <a onclick="toggleMenu('account1')">
+                    Account 1
+                </a>
+                <ul class="nav nav-list accounts" id="account1">
+                    <li><a href="/" title="Inbox">Inbox</a>
+                    </li>
+                    <li><a href="/" title="Archive">Archive</a>
+                    </li>
+                    <li><a href="/" title="Important">Important</a>
+                    </li>
+                    <li><a href="/" title="Personal">Personal</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-header">
+                <a onclick="toggleMenu('account2')">
+                    Account 2
+                </a>
+                <ul class="nav nav-list collapse accounts" id="account2">
+                    <li><a href="/" title="Inbox">Inbox</a>
+                    </li>
+                    <li><a href="/" title="Archive">Archive</a>
+                    </li>
+                    <li><a href="/" title="Important">Important</a>
+                    </li>
+                    <li><a href="/" title="Personal">Personal</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-header">
+                <a onclick="toggleMenu('account3')">
+                    Account 3
+                </a>
+                <ul class="nav nav-list collapse accounts" id="account3">
+                    <li><a href="/" title="Inbox">Inbox</a>
+                    </li>
+                    <li><a href="/" title="Archive">Archive</a>
+                    </li>
+                    <li><a href="/" title="Important">Important</a>
+                    </li>
+                    <li><a href="/" title="Personal">Personal</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-10">
+        <div class="row">
+            <table class="table table-hover table-striped" data-resizable-columns-id="mails-table">
+                <thead>
+                    <tr>
+                        <th width="5%" data-resizable-column-id="select_column" data-noresize></th>
+                        <th width="30%" data-resizable-column-id="sender_column">Sender</th>
+                        <th width="50%" data-resizable-column-id="subject_column">Subject</th>
+                        <th width="15%" data-resizable-column-id="date_column">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr class="emailrow" id="email1">
+                    <td><input type="checkbox"/></td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
                 </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><input type="checkbox"/></td>
-                <td>Test</td>
-                <td>Test</td>
-                <td>Test</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"/></td>
-                <td>Test</td>
-                <td>Test</td>
-                <td>Test</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox"/></td>
-                <td>Test</td>
-                <td>Test</td>
-                <td>Test</td>
-            </tr>
-            </tbody>
-        </table>
+                <tr class="emailrow" id="email2">
+                    <td><input type="checkbox"/></td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+                <tr class="emailrow" id="email3">
+                    <td><input type="checkbox"/></td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="mail_preview" class="row" style="display: block;">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">mail subject</h3>
+                    From: mail from
+                </div>
+                <div class="panel-body">
+                    email contents
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -118,13 +131,6 @@
 <script type="text/javascript" src="js/jquery.resizableColumns.js"></script>
 <script type="text/javascript" src="js/store.js"></script>
 
-<script>
-  $(function(){
-    $("table").resizableColumns({
-        store: window.store
-    });
-  });
-</script>
 </body>
 </html>
 
