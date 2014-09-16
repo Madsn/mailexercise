@@ -18,6 +18,13 @@
             padding-left: 15px;
             font-size: 85%;
         }
+        .hand:hover {
+            cursor: pointer;
+            cursor: hand;
+        }
+        .padding-top {
+            padding-top: 15px;
+        }
     </style>
 </head>
 <body ng-controller="InboxController">
@@ -29,7 +36,7 @@
                     {{account.name}}
                 </a>
                 <ul class="nav nav-list accounts" ng-repeat="folder in account.folders">
-                    <li><a href="/" title="{{folder.name}}">{{folder.name}}</a>
+                    <li><a href="/" title="{{folder}}">{{folder}}</a>
                     </li>
                 </ul>
             </li>
@@ -47,23 +54,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="emailrow" ng-repeat="email in account.folder.emails">
+                    <tr class="emailrow hand" ng-repeat="email in activeAccount.emails | startFrom:currentPage*pageSize | limitTo:pageSize" ng-click="selectEmail()">
                         <td><input type="checkbox"/></td>
-                        <td>{{email.sender}}</td>
+                        <td>{{email.from}}</td>
                         <td>{{email.subject}}</td>
                         <td>{{email.date}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div id="mail_preview" class="row" style="display: block;">
+        <div class="row text-right">
+            <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><i class="glyphicon glyphicon-chevron-left"></i></button>
+            {{currentPage+1}}/{{numberOfPages()}}
+            <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1"><i class="glyphicon glyphicon-chevron-right"></i></button>
+        </div>
+        <div id="mail_preview" class="row padding-top" ng-show="activeEmail">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">mail subject</h3>
-                    From: mail from
+                    <i style="float: right;" class="glyphicon glyphicon-remove hand" ng-click="activeEmail=null"></i>
+                    <h3 class="panel-title"><b>Subject:</b> {{activeEmail.subject}}</h3>
+                    <b>From:</b> {{activeEmail.from}}<br/>
+                    <b>Received:</b> {{activeEmail.date}}
                 </div>
                 <div class="panel-body">
-                    email contents
+                    {{activeEmail.body}}
                 </div>
             </div>
         </div>
