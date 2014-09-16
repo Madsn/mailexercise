@@ -29,7 +29,7 @@
                     {{account.name}}
                 </a>
                 <ul class="nav nav-list accounts" ng-repeat="folder in account.folders">
-                    <li><a href="/" title="{{folder}}">{{folder}}</a>
+                    <li><a href="/" title="{{folder.name}}">{{folder.name}}</a>
                     </li>
                 </ul>
             </li>
@@ -47,24 +47,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                <tr class="emailrow" id="email1">
-                    <td><input type="checkbox"/></td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
-                <tr class="emailrow" id="email2">
-                    <td><input type="checkbox"/></td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
-                <tr class="emailrow" id="email3">
-                    <td><input type="checkbox"/></td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
+                    <tr class="emailrow" ng-repeat="email in account.folder.emails">
+                        <td><input type="checkbox"/></td>
+                        <td>{{email.sender}}</td>
+                        <td>{{email.subject}}</td>
+                        <td>{{email.date}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

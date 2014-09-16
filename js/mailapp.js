@@ -5,22 +5,42 @@ mailApp.controller('InboxController', ['$scope', function($scope){
 
     $scope.accounts = {
         'account1': {
-            'folders': [
-                'inbox',
-                'archived'
-            ],
-            'name': 'Mikkel'
+            'name': 'Mikkel',
+            'folders': {
+                'inbox': {
+                    'name': 'inbox',
+                    'emails': [
+                        {'sender': 'Test', 'subject': 'test subject', date: '2014-09-01'},
+                        {'sender': 'Test 2', 'subject': 'test subject 2', date: '2014-08-01'}
+                    ]
+                },
+                'archived': {
+                    'name': 'archived',
+                    'emails': []
+                }
+            }
         },
         'account12' : {
-            'folders' : [
-                'inbox',
-                'archived',
-                'personal'
-            ],
-            'name' : 'Mikkel 2'
+            'name' : 'Mikkel 2',
+            'folders' : {
+                'inbox': {
+                    'name': 'inbox',
+                    'emails': [
+                        {'sender': 'Test', 'subject': 'test subject', date: '2014-09-01'},
+                        {'sender': 'Test 2', 'subject': 'test subject 2', date: '2014-08-01'}
+                    ]
+                },
+                'archived': {
+                    'name': 'archived',
+                    'emails': []
+                },
+                'personal': {
+                    'name': 'personal',
+                    'emails': []
+                }
+            }
         }
     };
-
 }]);
 
 $(function(){
