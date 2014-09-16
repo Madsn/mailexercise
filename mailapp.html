@@ -10,17 +10,68 @@
     <link type="text/css" href="css/jquery.dataTables-1.10.2.css" rel="stylesheet"/>
     <link type="text/css" href="css/jquery.dataTables_themeroller-1.10.2.css" rel="stylesheet"/>
 
+    <link type="text/css" href="css/jquery.resizableColumns.css" rel="stylesheet"/>
+    <link type="text/css" href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+
     <style type="text/css">
     </style>
 </head>
 <body>
 
+<div class="container">
+    <div class="row">
+        <table class="table table-hover table-striped" data-resizable-columns-id="mails-table">
+            <thead>
+                <tr>
+                    <th width="5%" data-resizable-column-id="select_column" data-noresize></th>
+                    <th width="30%" data-resizable-column-id="sender_column">Sender</th>
+                    <th width="50%" data-resizable-column-id="subject_column">Subject</th>
+                    <th width="15%" data-resizable-column-id="date_column">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"/></td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 <script type="text/javascript" src="jquery-ui-1.11.1/jquery-ui.js"></script>
-<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables-1.10.2.js"></script>
 <script type="text/javascript" src="js/tableSorting.js"></script>
 <script type="text/javascript" src="js/knockout-3.2.0.js"></script>
 <script type="text/javascript" src="js/mailapp.js"></script>
+
+<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.resizableColumns.js"></script>
+<script type="text/javascript" src="js/store.js"></script>
+
+<script>
+  $(function(){
+    $("table").resizableColumns({
+        store: window.store
+    });
+  });
+</script>
 </body>
 </html>
 
