@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Email app</title>
+
+    <link type="text/css" href="css/reset.css" rel="stylesheet"/>
+    <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.22.custom.css" rel="stylesheet"/>
+    <link type="text/css" href="css/mailapp.css" rel="stylesheet"/>
+    <link type="text/css" href="css/jquery.dataTables-1.10.2.css" rel="stylesheet"/>
+    <link type="text/css" href="css/jquery.dataTables_themeroller-1.10.2.css" rel="stylesheet"/>
+
+    <style type="text/css">
+            /*demo page css*/
+        body {
+            font-family:  "Trebuchet MS", sans-serif;
+            margin: 0px;
+            font-size:11px;
+        }
+
+        #header, #pre-header {
+            height:50px;background-color: black;
+            color:white;
+        }
+        #header {
+            position:fixed;left:0px;right:0px;top:0px;overflow:auto;z-index:100;
+        }
+        #footer, #pre-footer {
+            height:40px;
+        }
+        #footer {
+            position:fixed;left:0px;right:0px;bottom:0px;background-color: black;
+            color:white;z-index:100;
+        }
+        div {
+        }
+
+        h1 {
+            font-size:20px;
+        }
+
+        #side-bar {
+            width:300px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="header"><h1>Systematic Mailapp</h1></div>
+<div id="pre-header"></div>
+<table>
+    <tr>
+        <td valign="top">
+            <div id="side-bar">
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane    Here comes left pane
+            </div>
+
+        </td>
+        <td valign="top">
+            <div id="main">
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane    Here comes right pane
+            </div>
+
+        </td>
+    </tr>
+
+</table>
+
+<div id="pre-footer">xxx
+</div>
+<div id="footer"><h1>Footer</h1></div>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/tableSorting.js"></script>
+<script type="text/javascript" src="js/knockout-2.1.0.js"></script>
+<script type="text/javascript" src="js/mailapp.js"></script>
+<script>
+    $('#side-bar').resizable();
+
+</script>
+</body>
+</html>
+
+
