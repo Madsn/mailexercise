@@ -1,19 +1,27 @@
-var toggleMenu = function(id) {
-    var collapse = "collapse";
-    $(".accounts").toArray().forEach(function(elem) {
-        if (elem.id === id) {
-            if ($(elem).hasClass(collapse)) {
-                $(elem).removeClass(collapse);
-            } else {
-                $(elem).addClass(collapse);
-            }
-        } else {
-            if (!$(elem).hasClass(collapse)) {
-                $(elem).addClass(collapse);
-            }
+var mailApp = angular.module('mailApp',[]);
+
+mailApp.controller('InboxController', ['$scope', function($scope){
+    $scope.greeting = "HEeeelloo";
+
+    $scope.accounts = {
+        'account1': {
+            'folders': [
+                'inbox',
+                'archived'
+            ],
+            'name': 'Mikkel'
+        },
+        'account12' : {
+            'folders' : [
+                'inbox',
+                'archived',
+                'personal'
+            ],
+            'name' : 'Mikkel 2'
         }
-    });
-};
+    };
+
+}]);
 
 $(function(){
     $("table").resizableColumns({
@@ -21,13 +29,3 @@ $(function(){
     });
 });
 
-$(function(){
-   $(".emailrow").toArray().forEach(function(row) {
-      $(row).click(function(){
-          console.log("open email preview");
-      });
-      $(row).dblclick(function(){
-         console.log("open email in new window");
-      });
-   });
-});
