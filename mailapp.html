@@ -14,11 +14,64 @@
     <link type="text/css" href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
 
     <style type="text/css">
+        ul.accounts > li {
+            padding-left: 15px;
+            font-size: 85%;
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="col-xs-2">
+    <ul class="nav nav-list">
+        <li class="nav-header">
+            <a onclick="toggleMenu('account1')">
+                Account 1
+            </a>
+            <ul class="nav nav-list accounts" id="account1">
+                <li><a href="/" title="Inbox">Inbox</a>
+                </li>
+                <li><a href="/" title="Archive">Archive</a>
+                </li>
+                <li><a href="/" title="Important">Important</a>
+                </li>
+                <li><a href="/" title="Personal">Personal</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-header">
+            <a onclick="toggleMenu('account2')">
+                Account 2
+            </a>
+            <ul class="nav nav-list collapse accounts" id="account2">
+                <li><a href="/" title="Inbox">Inbox</a>
+                </li>
+                <li><a href="/" title="Archive">Archive</a>
+                </li>
+                <li><a href="/" title="Important">Important</a>
+                </li>
+                <li><a href="/" title="Personal">Personal</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-header">
+            <a onclick="toggleMenu('account3')">
+                Account 3
+            </a>
+            <ul class="nav nav-list collapse accounts" id="account3">
+                <li><a href="/" title="Inbox">Inbox</a>
+                </li>
+                <li><a href="/" title="Archive">Archive</a>
+                </li>
+                <li><a href="/" title="Important">Important</a>
+                </li>
+                <li><a href="/" title="Personal">Personal</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="container col-xs-10">
     <div class="row">
         <table class="table table-hover table-striped" data-resizable-columns-id="mails-table">
             <thead>
